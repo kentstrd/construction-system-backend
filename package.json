@@ -1,0 +1,28 @@
+{
+  "name": "construction-system-backend",
+  "version": "1.0.0",
+  "description": "construction-system-backend",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.16",
+    "nodemon": "^1.18.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentstrd/construction-system-backend.git"
+  },
+  "author": "Kent Estrada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kentstrd/construction-system-backend/issues"
+  },
+  "homepage": "https://github.com/kentstrd/construction-system-backend#readme"
+}
