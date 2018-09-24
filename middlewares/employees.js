@@ -1,4 +1,4 @@
-Employee = require('../routes/employee');
+Employee = require('../controllers/employee');
 
 module.exports = function(req, res, next) {
   if (req.session && req.session.employee) {

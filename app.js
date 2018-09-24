@@ -75,7 +75,7 @@ const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 app.use(require('./middlewares/employees'));
 app.use(require('./middlewares/projects'));
-app.use(require('./controllers'));
+app.use(require('./routes'));
 
 app.use(bodyParser.json());
 app.route('/api/project').post((req, res) => {

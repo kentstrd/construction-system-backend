@@ -1,4 +1,4 @@
-Project = require('../routes/project');
+Project = require('../controllers/project');
 
 module.exports = function(req, res, next) {
   if (req.session && req.session.project) {

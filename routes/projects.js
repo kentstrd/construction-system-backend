@@ -1,10 +1,11 @@
 var express = require('express'),
   router = express.Router(),
-  Project = require('../routes/project'),
+  Project = require('../controllers/project'),
   schema = require('../schema/project'),
   auth = require('../middlewares/auth');
 
 router.post('/api/project', auth, function(req, res) {
+  res.status(201).send(req.body);
   var project = new schema(req.body.project);
   Project.post(project, res);
 });

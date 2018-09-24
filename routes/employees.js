@@ -1,10 +1,11 @@
 var express = require('express'),
   router = express.Router(),
-  Employee = require('../routes/employee'),
+  Employee = require('../controllers/employee'),
   schema = require('../schema/employee'),
   auth = require('../middlewares/auth');
 
 router.post('/api/employee', auth, function(req, res) {
+  res.status(201).send(req.body);
   const employee = new Employee({
     fullname: {
       firstName: req.body.fullname.firstName,
