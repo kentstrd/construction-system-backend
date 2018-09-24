@@ -77,23 +77,23 @@ app.delete('/api/employee/:id', (req, res, next) => {
   });
 });
 
-app.route('/api/employee/:id').get((req, res) => {
-  const requestedEmployeeId = req.params['name'];
-  res.send(requestedEmployeeId);
-});
+// app.route('/api/employee/:id').get((req, res) => {
+//   const requestedEmployeeId = req.params['name'];
+//   res.send(requestedEmployeeId);
+// });
 
-app.use(bodyParser.json());
-app.route('/api/employee').post((req, res) => {
-  res.status(201).send(req.body);
-});
+// app.use(bodyParser.json());
+// app.route('/api/employee').post((req, res) => {
+//   res.status(201).send(req.body);
+// });
 
-app.route('/api/employee/:id').put((req, res) => {
-  res.send(200, req.body);
-});
+// app.route('/api/employee/:id').put((req, res) => {
+//   res.send(200, req.body);
+// });
 
-app.route('/api/employee/:id').delete((req, res) => {
-  res.sendStatus(204);
-});
+// app.route('/api/employee/:id').delete((req, res) => {
+//   res.sendStatus(204);
+// });
 
 // get project from mongo
 app.delete('/api/project/:id', (req, res, next) => {
@@ -137,24 +137,24 @@ app.post('/api/project', (req, res, next) => {
   });
 });
 
-// ROUTES TO USE PROJECT API TO ANGULAR
+// // ROUTES TO USE PROJECT API TO ANGULAR
 
-app.route('/api/project/:id').get((req, res) => {
-  const requestedProjectId = req.params['name'];
-  res.send(requestedProjectId);
-});
+// app.route('/api/project/:id').get((req, res) => {
+//   const requestedProjectId = req.params['name'];
+//   res.send(requestedProjectId);
+// });
 
-app.use(bodyParser.json());
-app.route('/api/project').post((req, res) => {
-  res.status(201).send(req.body);
-});
+// app.use(bodyParser.json());
+// app.route('/api/project').post((req, res) => {
+//   res.status(201).send(req.body);
+// });
 
-app.route('/api/project/:id').put((req, res) => {
-  res.send(200, req.body);
-});
+// app.route('/api/project/:id').put((req, res) => {
+//   res.send(200, req.body);
+// });
 
-app.route('/api/project/:id').delete((req, res) => {
-  res.sendStatus(204);
-});
+// app.route('/api/project/:id').delete((req, res) => {
+//   res.sendStatus(204);
+// });
 
 module.exports = app;
