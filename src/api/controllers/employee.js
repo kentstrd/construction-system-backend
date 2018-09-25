@@ -11,7 +11,7 @@ import { generateError } from '../utils/generateError';
  */
 exports.load = async (req, res, next, id) => {
   try {
-    const employee = await employee.get(id);
+    const employee = await Employee.get(id);
     req.locals = { employee };
     return next();
   } catch (error) {

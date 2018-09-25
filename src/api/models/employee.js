@@ -11,19 +11,19 @@ import APIError from '../utils/APIError';
 
 const employeeSchema = mongoose.Schema({
   fullname: {
-    firstName: String,
-    lastName: String
+    firstName: { type: String },
+    lastName: { type: String }
   },
-  gender: String,
-  skill: String,
+  gender: { type: String },
+  skill: { type: String },
   addresses: [
     {
-      homeaddress: String
+      homeaddress: { type: String }
     }
   ],
   contacts: [
     {
-      homenumber: String
+      homenumber: { type: String }
     }
   ]
 });

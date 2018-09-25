@@ -35,12 +35,13 @@ exports.create = async (req, res, next) => {
   try {
     const project = new Project(req.body);
     const savedproject = await project.save();
-    console.log(savedproject);
+    // console.log(savedproject.transform());
     res.status(httpStatus.CREATED);
     res.json({
       message: 'Project added Succesfully',
-      projectId: savedproject._id
+      projectId: savedproject._id || 'new'
     });
+    // console.log(res.json(savedproject.transform()));
   } catch (error) {
     next(generateError(error));
   }
