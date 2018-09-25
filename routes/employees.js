@@ -6,6 +6,7 @@ var express = require('express'),
 
 router.post('/api/employee', auth, function(req, res) {
   res.status(201).send(req.body);
+  console.log(req.body);
   const employee = new Employee({
     fullname: {
       firstName: req.body.fullname.firstName,
